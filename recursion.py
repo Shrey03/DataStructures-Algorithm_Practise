@@ -49,7 +49,7 @@ def factorial(x):
     """Setting assert rule , so that thet conditions are set and it will not use all the stack memory, before using assert , 
     recrusion method will accept non onteger numbers and negative number
     and it will give error """
-    assert x >= 0 and int(x) == x, 'The number must be positive integers only'
+    assert x >= 0 and type(x) == int, 'The number must be positive integers only'
     if x == 1: 
         return 1
     else:
@@ -58,7 +58,7 @@ def factorial(x):
 
 num = 4
 final =  factorial(num)
-# print("The factorial of", num, "is", final )
+print("The factorial of", num, "is", final )
 
 
 
@@ -69,7 +69,7 @@ final =  factorial(num)
 # f(n) = f(n-1) + f(n-2)
 
 def fibonacci(n):
-    assert x >= 0 and int(x) == x, 'The number must be positive integers only'
+    assert n >= 0 and int(n) == n, 'The number must be positive integers only'
     if n in [0,1]:
         return n
     else:
