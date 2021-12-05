@@ -92,4 +92,37 @@ def sum(n):
     else:
         return int(n%10) + sum(int(n/10))
 
-print(sum(52))
+# print(sum(52))
+
+
+
+# HACKER RANK 
+# Find the number of ways that a given integer,X , can be expressed as the sum of the Nth powers of unique, natural numbers.
+import random
+
+
+def powerSum(x,n):
+    N = random.randint(0,100)
+    N2 = random.randint(0,100)
+    totalSum = (N**n) + (N2**n)
+    # print(totalSum)
+    # print(x)
+    if(x != totalSum):
+        return powerSum(x,n)
+
+    else:
+        
+        print(N , N2)
+        print(totalSum)
+    
+
+   
+
+powerSum(5,2)
+
+
+
+        
+
+
+
