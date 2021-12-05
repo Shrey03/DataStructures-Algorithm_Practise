@@ -58,13 +58,13 @@ def factorial(x):
 
 num = 4
 final =  factorial(num)
-print("The factorial of", num, "is", final )
+# print("The factorial of", num, "is", final )
 
 
 
 # ############################################################
 # ############################################################
-# write a recursive fu nction to find fibonacci series 
+# write a recursive function to find fibonacci series 
 # 0 , 1 , 1 , 2,3,5,8,13,21
 # f(n) = f(n-1) + f(n-2)
 
@@ -76,6 +76,20 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
 
 n = 5
-print(fibonacci(6))
+# print(fibonacci(6))
 
+# ############################################################
+# ############################################################
+# write a recursive function to find sum of digits of a positive integer 
+# 
+def sum(n):
+    """Assert will check the number is inserted is positive or not and is integer only
+    Then if loop will check that if n is equals to 0 then it will stop recursive funtion
+    otherwise it will check remainder"""
+    assert n >= 0 and type(n) == int, 'The number must be positive integers only'
+    if n == 0:
+        return 0
+    else:
+        return int(n%10) + sum(int(n/10))
 
+print(sum(52))
